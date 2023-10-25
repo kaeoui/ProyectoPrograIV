@@ -1,351 +1,535 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head><script src="../assets/js/color-modes.js"></script>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.118.2">
-    <title>WeWork Information</title>
+<head>
+  <script src="../assets/js/color-modes.js"></script>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/badges/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.118.2">
+  <title>WeWork Information</title>
 
-    
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/badges/">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
 
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
 
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
 
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
 
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
 
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
 
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
 
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
 
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
-    </style>
+    .imagen {
+      height: 500px;
+      width: 55px;
+      margin-left: 20px;
 
-    
-    <!-- Custom styles for this template -->
-    <link href="badges.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    }
 
-  </head>
-  <body>
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-      <symbol id="check2" viewBox="0 0 16 16">
-        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-      </symbol>
-      <symbol id="circle-half" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-      </symbol>
-      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-      </symbol>
-      <symbol id="sun-fill" viewBox="0 0 16 16">
-        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-      </symbol>
-    </svg>
+    .imagen2 {
+      height: 500px;
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+  </style>
 
-<!-- BOTÓN DE MODO CLARO Y MODO OSCURO -->
-  
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-              id="bd-theme"
-              type="button"
-              aria-expanded="false"
-              data-bs-toggle="dropdown"
-              aria-label="Toggle theme (auto)">
-        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-     
-     
-     
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-            Light
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-            Dark
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
-            Auto
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-      </ul>
+
+  <!-- Custom styles for this template -->
+  <link href="badges.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path
+        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path
+        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+      <path
+        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path
+        d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+    </symbol>
+  </svg>
+
+  <!-- BOTÓN DE MODO CLARO Y MODO OSCURO -->
+
+  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+      aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+      <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+        <use href="#circle-half"></use>
+      </svg>
+      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+
+
+
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+          aria-pressed="false">
+          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+            <use href="#sun-fill"></use>
+          </svg>
+          Light
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+          aria-pressed="false">
+          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+            <use href="#moon-stars-fill"></use>
+          </svg>
+          Dark
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+          aria-pressed="true">
+          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+            <use href="#circle-half"></use>
+          </svg>
+          Auto
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="x-circle-fill" viewBox="0 0 16 16">
+      <path
+        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+    </symbol>
+  </svg>
+
+
+  <!--Primer Cuadro - Titulo -->
+  <div class="d-flex gap-2 justify-content-center py-5">
+    <h1> Información </h1>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <!-- Segundo Cuadro -->
+  <div class="row">
+    <div class="col text-center">
+      <h1 class="mt-3"> ¿Cómo encontrar mis claves Wifi? </h1>
+    </div>
+  </div>
+
+
+  <div class="d-flex gap-3 justify-content-center py-5">
+
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen" src="img/wifi/Wifi1.jpg" alt="">
+        <h7 class="mt-3 text-center">1. Abre tu aplicación y selecciona en el menú inferior la opción de Cuenta. </h7>
+
+      </div>
     </div>
 
-    
-<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-  <symbol id="x-circle-fill" viewBox="0 0 16 16">
-    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-  </symbol>
-</svg>
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen" src="img/wifi/Wifi2.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center">2. En el menú selecciona la opción de Guía del Edificio.
+        </h7>
+
+      </div>
+    </div>
+
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen" src="img/wifi/Wifi3.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center">3. Selecciona la opción Wi-Fi.
+        </h7>
+      </div>
+    </div>
+
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen" src="img/wifi/Wifi4.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center">4. Encontrarás tu usuario y contraseña para la red inalámbrica exclusiva de miembros: WeWorkWiFi.
+        </h7>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <!-- Cuadro Tres -->
+  <div class="row">
+    <div class="col text-center">
+      <h1 class="mt-3"> ¿Cómo reservar una sala? </h1>
+    </div>
+  </div>
+  <div class="d-flex gap-3 justify-content-center py-5">
+
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen" src="img/salas/Salas1.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center">1. Abre tu aplicación y en la parte inferior verás seleccionado la parte de Salas. Puedes cambiar de ubicación, si así lo deseas, en la parte superior colocando el nombre del edificio o seleccionando los puntos en el mapa.
+        </h7>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen" src="img/salas/Salas1.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center">2. Elige la sala que quieras. Puedes filtrar según tus necesidades, fecha, horario y/o capacidad. Elige la duración de tu reunión. También asegúrate de revisar el día y que los datos de la reserva sean correctos.
+        </h7>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen" src="img/salas/Salas1.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center">3. Completa tu reservación. Aquí también podrás ver cuántos créditos se te descontarán. Recuerda que las salas se pueden reservar de 12am-11pm.
+        </h7>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center flex-column h-100">
+        <!--Este texto de abajo tiene que ir esquineado-->
+        <h7 class="mt-auto text-center">Da click en Completar reserva y ¡listo!</h7>
+      </div>
+    </div>
+
+  </div>
 
 
-<!--Primer Cuadro - Titulo -->
-<div class="d-flex gap-2 justify-content-center py-5">
-  <h1> Información </h1>
-</div>
+  <div class="b-example-divider"></div>
 
-<div class="b-example-divider"></div>
+  <!-- Cuadro Cuatro -->
+  <div class="row">
+    <div class="col text-center">
+      <h1 class="mt-3"> ¿Cómo registrar invitados? </h1>
+    </div>
+  </div>
 
-<!-- Segundo Cuadro -->
-<h1> ¿Como encontrar mis claves Wifi? </h1>
-<div class="d-flex gap-2 justify-content-center py-5">
+  <div class="d-flex gap-3 justify-content-center py-5">
 
-  <img src="img/wifi/Wifi1.jpg" height="300" alt="">
-  <h7>1.  Abre tu aplicación y selecciona en el menú inferior la opción de Cuenta.
-    </h7>
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen" src="img/invitados/Invitados1.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center">1. Abre tu aplicación y selecciona en el menú inferior el dibujo del reloj, esta es la opción de Reservaciones.
+        </h7>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen" src="img/invitados/Invitados2.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center">2. Selecciona Agregar invitado en la parte superior derecha.
+        </h7>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen" src="img/invitados/Invitados3.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center">3. Ingresa los datos de tu invitado. Con esto le llegará un correo con su código QR y todo lo necesario para su visita.
+        </h7>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen" src="img/invitados/Invitados4.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center">4. Confirma la fecha, hora y ubicación. ¡Listo! Te notificaremos cuando tus invitados lleguen al edificio.
+        </h7>
 
-  <img src="img/wifi/Wifi2.jpg" height="300" alt="">
-  <h7>2. En el menú selecciona la opción de Guía del Edificio.
-  </h7>
+      </div>
+    </div>
 
-  <img src="img/wifi/Wifi3.jpg" height="300" alt="">
-  <h7>3. Selecciona la opción Wi-Fi.
-  </h7>
+  </div>
 
-  <img src="img/wifi/Wifi4.jpg" height="300" alt="">
-  <h7>4. Encontrarás tu usuario y contraseña para la red inalámbrica exclusiva de miembros: WeWorkWiFi.
-  </h7>
+  <div class="b-example-divider"></div>
+
+  <!-- Cuadro Cinco -->
+  <div class="row">
+    <div class="col text-center">
+      <h1 class="mt-3"> ¿Necesita ayuda? </h1>
+    </div>
+  </div>
+  <div class="d-flex gap-3 justify-content-center py-5">
+
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen2" src="img/necesitaayuda/Ayuda1.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center"> 1. Abrí tu aplicación y selecciona en el menú inferior la opción de Cuenta.
+        </h7>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen2" src="img/necesitaayuda/Ayuda 2.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center">2. En el menú selecciona la opción de Soporte.
+        </h7>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen2" src="img/necesitaayuda/Ayuda3.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center">3. Selecciona la categoría que necesites. Escribí tu problema y dale Enviar. El departamento correspondiente se pondrá en contacto con vos.
+        </h7>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <!-- Cuadro Seis -->
+  <div class="row">
+    <div class="col text-center">
+      <h1 class="mt-3"> ¿Necesita imprimir? </h1>
+      <br> </br>
+      <h6>Ingresa al Centro de Impresión en la Red de Miembros desde tu computadora (members.wework.com/print).</h6>
+    </div>
+  </div>
+
+  <div class="d-flex gap-5 justify-content-center py-5">
+
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <h3 class="mt-3 text-center"> IMPRIMIR DESDE EL PORTAL</h3>
+        <h7 class="mt-3">
+          <ol>
+
+            <li class="mb-2 "> Arrastra y suelta tus archivos en el Centro de Impresión. </li>
+            <li class="mb-2"> Modifica los detalles de tu impresión si así lo deseas. </li>
+            <li class="mb-2"> Da click en “Enviar a cola de impresión. </li>
+            <li class="mb-2"> Acércate a una impresora y coloca tu tarjeta.</li>
+            <li class="mb-2"> Libera el archivo y ¡listo! </li>
+          </ol>
+        </h7>
+
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+
+        <h3 class="mt-3 text-center"> IMPRIMIR DESDE TU COMPUTADORA</h3>
+        <h7 class="mt-3">
+          <ol>
+
+            <li class="mb-2"> En el Centro de Impresión, baja un poco y haz click en el botón “Descargar Print”. </li>
+            <li class="mb-2"> Instala el programa en tu computadora. </li>
+            <li class="mb-2"> A la hora de imprimir selecciona la impresora “WeWork” (Asegúrate de estar conectado a la
+              red de WeWorkWiFi). </li>
+            <li class="mb-2"> Acércate a una impresora y desliza tu tarjeta.</li>
+            <li class="mb-2"> Libera el archivo y ¡listo! </li>
+          </ol>
+
+        </h7>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <!-- Cuadro Siete-->
+  <div class="row">
+    <div class="col text-center">
+      <h1 class="mt-3"> ¿Cómo reservar un escritorio? </h1>
+    </div>
+  </div>
+
+  <div class="d-flex gap-3 justify-content-center py-5">
+
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen2" src="img/escritorio/Escritorio1.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center">1. Abre tu aplicación y selecciona Escritorio en la menú inferior. En la sección de Reservas también podrás ver tus reservaciones actuales y futuras.
+        </h7>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen2" src="img/escritorio/Escritorio2.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center">2. Elige el edificio que quieras. Debe de contar con disponibilidad para que puedas hacer la reserva. Puedes cambiar de ciudad y/o fecha si así lo deseas.
+        </h7>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen2" src="img/escritorio/Escritorio3.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center">3. Revisa que la información ingresada sea correcta. Da click en Completar Reserva.
+        </h7>
+      </div>
+    </div>
+
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center flex-column h-100">
+        <h7 class="mt-auto">4. ¡Listo! tu tarjeta se activará de 9am a 6pm en el edificio que elegiste. Recuerda que tu tarjeta se activará en el edificio que elegiste 10 minutos después de tu reserva.
+        </h7>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <!-- Cuadro Ocho-->
+
+  <div class="row">
+    <div class="col text-center">
+      <h1 class="mt-3">WeWork All Access Escritorios </h1>
+    </div>
+  </div>
+
+  <div class="d-flex gap-3 justify-content-center py-5">
+
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen" src="img/escritorio/Escritorio1.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center">1. Abre tu aplicación y selecciona Escritorio en la menú inferior. En la sección de Reservas también podrás ver tus reservaciones actuales y futuras.
+        </h7>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen" src="img/escritorio/Escritorio2.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center">2. Elige el edificio que quieras. Debe de contar con disponibilidad para que puedas hacer la reserva. Puedes cambiar de ciudad y/o fecha si así lo deseas.
+        </h7>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center">
+        <img class="imagen" src="img/escritorio/Escritorio3.jpg" height="300" alt="">
+        <h7 class="mt-3 text-center">3. Revisa que la información ingresada sea correcta. Da click en Completar Reserva.
+        </h7>
+      </div>
+    </div>
+
+    <div class="col-2">
+      <div class="row justify-content-center align-items-center flex-column h-100">
+        <h7 class="mt-auto text-center">4. ¡Listo! tu tarjeta se activará de 9am a 6pm en el edificio que elegiste. Recuerda que tu tarjeta se activará en el edificio que elegiste 10 minutos después de tu reserva.
+        </h7>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  </div>
+
+
+  <div class="b-example-divider"></div>
+
+  <!-- Cuadro Nueve -->
   
-</div>
+  <div class="d-flex gap-2 justify-content-center py-5">
+    <div class="col-3 ml-3"> 
+    <h1> RECORDATORIO: Actualiza tu App </h1>
+    </div>
 
-<div class="b-example-divider"></div>
-
-<!-- Cuadro Tres -->
-<h1> ¿Como reservar una sala? </h1>
-<div class="d-flex gap-2 justify-content-center py-5">
-
-  <img src="img/salas/Salas1.jpg" height="300" alt="">
-  <h7>1.  Abre tu aplicación y en la parte inferior verás seleccionado la parte de Salas.
-      Puedes cambiar de ubicación, si así lo deseas, en la parte superior colocando el nombre del edificio o seleccionando los puntos en el mapa.
+    <div class="col-8">
+    <h7>¿Tu app de WeWork está actualizada? Esto es súper importante para que no tengas inconvenientes navegando dentro de la app. Recuerda que puedes mandar mensaje a tu Equipo de Comunidad para apoyarte.
     </h7>
+    </div>
 
-  <img src="img/salas/Salas1.jpg" height="300" alt="">
-  <h7>2. Elige la sala que quieras. Puedes filtrar según tus necesidades, fecha, horario y/o capacidad. Elige la duración de tu reunión. También asegúrate de revisar el día y que los datos de la reserva sean correctos. 
-    </h7>
+  </div>
 
-  <img src="img/salas/Salas1.jpg" height="300" alt="">
-  <h7>3. Completa tu reservación. Aquí también podrás ver cuántos créditos se te descontarán. Recuerda que las salas se pueden reservar de 12am-11pm.
-  </h7>
+  <div class="b-example-divider"></div>
 
-  <!--Este texto de abajo tiene que ir esquineado-->
-  <h7>Da click en Completar reserva y ¡listo!</h7>
-</div>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
 
-<div class="b-example-divider"></div>
-
-<!-- Cuadro Cuatro -->
-<h1> ¿Como registrar invitados?</h1>
-<div class="d-flex gap-2 justify-content-center py-5">
-
-  <img src="img/invitados/Invitados1.jpg" height="300" alt="">
-  <h7>1.  Abre tu aplicación y selecciona en el menú inferior el dibujo del reloj, esta es la opción de Reservaciones.
-  </h7>
-
-  <img src="img/invitados/Invitados2.jpg" height="300" alt="">
-  <h7>2. Selecciona Agregar invitado en la parte superior derecha. 
-  </h7>
-
-  <img src="img/invitados/Invitados3.jpg"height="300" alt="">
-  <h7>3. Ingresa los datos de tu invitado. Con esto le llegará un correo con su código QR y todo lo necesario para su visita.
-    </h7>
-
-    <img src="img/invitados/Invitados4.jpg" height="300" alt="">
-  <h7>4. Confirma la fecha, hora y ubicación. 
-    ¡Listo! Te notificaremos cuando tus invitados 
-    lleguen al 
-    edificio.  
-    
-  </h7>
-</div>
-
-<div class="b-example-divider"></div>
-
-<!-- Cuadro Cinco -->
-<h1> ¿Necesita Ayuda? </h1>
-<div class="d-flex gap-2 justify-content-center py-5">
-  
-  <img src="img/necesitaayuda/Ayuda1.jpg" height="300" alt="">
-  <h7> 1.  Abrí tu aplicación y selecciona en el menú inferior la opción de Cuenta
-    </h7>
-
-    <img src="img/necesitaayuda/Ayuda 2.jpg" height="300" alt="">
-  <h7>2. En el menú selecciona la opción de Soporte
-  </h7>
-
-  <img src="img/necesitaayuda/Ayuda3.jpg" height="300" alt="">
-  <h7>3. Selecciona la categoría que necesites. Escribí  tu problema y dale Enviar. 
-    El departamento correspondiente se pondrá en contacto con vos..
-    </h7>
-</div>
-
-<div class="b-example-divider"></div>
-
-<!-- Cuadro Seis -->
-<h1> ¿Necesita imprimir? </h1>
-<h6>Ingresa al Centro de Impresión en la Red de Miembros desde tu computadora (members.wework.com/print)</h6>
-<div class="d-flex gap-2 justify-content-center py-5">
-  
-  <h3> IMPRIMIR DESDE EL PORTAL</h3>
-  <h7> 1.Arrastra y suelta tus archivos en el Centro de Impresión
-    2.Modifica los detalles de tu impresión si así lo deseas
-    3.Da click en “Enviar a cola de impresión”
-    4.Acércate a una impresora y coloca tu tarjeta
-    5.Libera el archivo y ¡listo!</h7>
-  
-    <h3> IMPRIMIR DESDE TU COMPUTADORA</h3>
-    <h7>En el Centro de Impresión, baja un poco y haz click en el botón “Descargar Print”
-      Instala el programa en tu computadora
-      A la hora de imprimir selecciona la impresora “WeWork” (Asegúrate de estar conectado a la red de WeWorkWiFi)
-      Acércate a una impresora y desliza tu tarjeta
-      Libera el archivo y ¡listo!
-      </h7>
-</div>
-
-<div class="b-example-divider"></div>
-
-<!-- Cuadro Siete-->
-<h1> ¿Como reservar un escritorio? </h1>
-<div class="d-flex gap-2 justify-content-center py-5">
-  
-  <img src="img/escritorio/Escritorio1.jpg" height="300" alt="">
-  <h7>1.  Abre tu aplicación y selecciona  Escritorio en la menú inferior. En la sección de Reservas también podrás ver tus reservaciones actuales y futuras. 
-    </h7>
-
-  <img src="img/escritorio/Escritorio2.jpg" height="300" alt="">
-  <h7>2. Elige el edificio que quieras. Debe de contar con disponibilidad para que puedas hacer la reserva. Puedes cambiar de ciudad y/o fecha si así lo deseas.
-    </h7>
-  
-  <img src="img/escritorio/Escritorio3.jpg" height="300" alt="">
-  <h7>3. Revisa que la información ingresada sea correcta. Da click en Completar Reserva.
-    </h7>
-  <h7>4. ¡Listo! tu tarjeta se activará de 9am a 6pm en el edificio que elegiste. Recuerda que tu tarjeta se activará en el edificio que elegiste 10 minutos después de tu reserva.
-    </h7>
-</div>
-
-<div class="b-example-divider"></div>
-
-<!-- Cuadro Ocho-->
-<h1> WeWork All Access Escritorios </h1>
-<div class="d-flex gap-2 justify-content-center py-5">
-  
-  <img src="img/escritorio/Escritorio1.jpg" height="300" alt="">
-  <h7>1.  Abre tu aplicación y selecciona  Escritorio en la menú inferior. En la sección de Reservas también podrás ver tus reservaciones actuales y futuras. 
-    </h7>
-
-  <img src="img/escritorio/Escritorio2.jpg" height="300" alt="">
-  <h7>2. Elige el edificio que quieras. Debe de contar con disponibilidad para que puedas hacer la reserva. Puedes cambiar de ciudad y/o fecha si así lo deseas.
-    </h7>
-  
-  <img src="img/escritorio/Escritorio3.jpg" height="300" alt="">
-  <h7>3. Revisa que la información ingresada sea correcta. Da click en Completar Reserva.
-    </h7>
-  <h7>4. ¡Listo! tu tarjeta se activará de 9am a 6pm en el edificio que elegiste. Recuerda que tu tarjeta se activará en el edificio que elegiste 10 minutos después de tu reserva.
-    </h7>
-</div>
-
-
-<div class="b-example-divider"></div>
-
-<!-- Cuadro Nueve -->
-<div class="d-flex gap-2 justify-content-center py-5">
-  <h1>  RECORDATORIO: Actualiza tu App </h1>
-  <h7>¿Tu app de WeWork está actualizada? Esto es súper importante para que no tengas inconvenientes navegando dentro de la app. Recuerda que puedes mandar mensaje a tu Equipo de Comunidad para apoyarte.
-</h7>
-</div>
-
-<div class="b-example-divider"></div>
-
-<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    </body>
 </html>
